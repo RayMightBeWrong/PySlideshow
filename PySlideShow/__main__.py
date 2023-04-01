@@ -13,7 +13,6 @@ def main():
     # parse the input file
     
     # download images needed
-    imageDownloader.downloadImg("balls")
 
     # create slides
 
