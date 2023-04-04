@@ -1,9 +1,10 @@
 from PIL import Image,ImageDraw,ImageFont
 import re
-
+import os
 
 def translatePos(pos,mWidth,mHeight):
     posL = re.findall("([tmb][lcr])",pos)
+    base = (0,0,0)
     for i in range(len(posL)):
         if i==0:
             match posL[i]:
@@ -63,15 +64,15 @@ def generateSlides(slideshow):
     for slide in slideshow["slides"]:
         counter+=1
         newSlide =  Image.new('RGB', (width,height), "white")
-        draw = ImageDraw.Draw(newSlide)
-
         for elements in slide:
             elType= elements[0]
             elConfig = elements[1]
             if elType == "text":
-                font = ImageFont.truetype("/usr/share/fonts/truetype/liberation/"+elConfig["font"]+".ttf", elConfig["size"])
+                draw = ImageDraw.Draw(newSlide)
+                #TODO FIX fonts
+                font = ImageFont.truetype("/usr/share/fonts/truetype/liberation/"+"LiberationMono-Bold"+".ttf", elConfig["size"])
                 left, top, right, bottom = font.getbbox(elConfig["text"])
-                container = translatePos(elConfig["pos"],width,height)
+                container = translatePos(elConfig["cont"],width,height)
                 tWidth = right-left
                 tHeight = bottom-top
                 
@@ -84,13 +85,13 @@ def generateSlides(slideshow):
 
                 draw.text((posx,posy), elConfig["text"],"black", font)
 
-            elif elType == "image":
+            elif elType == "img":
                 img = Image.open(elConfig["src"])
                 iwidth, iheight = img.size
                 flag1 = True
                 flag2 = True
 
-                container = translatePos(elConfig["pos"],width,height)
+                container = translatePos(elConfig["cont"],width,height)
                 while(flag1 or flag2):
                     
                     if min(container[2] - container[0],iwidth) != iwidth:
@@ -118,8 +119,10 @@ def generateSlides(slideshow):
                     posy = container[1]
 
                 newSlide.paste(img, (int(posx),int(posy)))
+                os.remove(elConfig["src"])
     
-        newSlide.save("slide"+counter+".png")
+        newSlide.save("./slides/slide"+str(counter)+".png")
+
 
 
 

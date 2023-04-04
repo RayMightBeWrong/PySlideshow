@@ -1,21 +1,24 @@
 import cv2
 
-def videoMaker(slideshow):
-    width = 0       # TODO
-    height = 0      # TODO
-    outputFile = "" # TODO
-    fps = 1         # TODO
+def videoMaker(slideshow,outputfile):
+    width = slideshow["config"]["width"]       
+    height = slideshow["config"]["height"]       
+    outputFile = outputfile 
+    fps = 1         
 
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v') # Be sure to use lower case
+    fourcc = cv2.VideoWriter_fourcc(*'XVID') # Be sure to use lower case
     out = cv2.VideoWriter(outputFile, fourcc, fps, (width, height))
-
-    slides = {} # TODO
-
-    for slide in slides:
-        slidePath = slide["path"]
-        slideDuration = slide["duration"]
+    counter =1
+    for slide in slideshow["slides"]:
+        slidePath = """./slides/slide{counter}.png""".format(counter=counter)
+        slideDuration=5
+        for elem in slide:
+            
+            if elem[0]=="duration": slideDuration = elem[1]["time"]
+       
         for j in range(fps*slideDuration):
             frame = cv2.imread(slidePath)
-            out.write(frame) # Write out frame to video      
+            out.write(frame) # Write out frame to video   
+        counter+=1   
     out.release()
 

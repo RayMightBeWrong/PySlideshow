@@ -1,6 +1,6 @@
 from lark import Transformer
 
-from parserFunctions import *
+from parser.parserFunctions import *
 from PIL import ImageColor
 
 stack = []
@@ -25,7 +25,7 @@ class Transformer(Transformer):
     def start(self, items):
         if self.valid:
             if self.configuration == []:
-                self.configuration = {'width': 500, 'heigth': 500}
+                self.configuration = {'width': 500, 'height': 500}
             return {
                 'config': self.configurations,
                 'slides': slides
@@ -124,7 +124,7 @@ class Transformer(Transformer):
         return 'img'
 
     def NR(self, token):
-        return float(token)
+        return int(token)
 
     def WORD(self, token):
         return str(token)
