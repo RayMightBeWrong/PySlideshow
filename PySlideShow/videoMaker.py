@@ -6,8 +6,8 @@ def videoMaker(slideshow,outputfile):
     outputFile = outputfile 
     fps = 1         
 
-    fourcc = cv2.VideoWriter_fourcc(*'XVID') # Be sure to use lower case
-    out = cv2.VideoWriter(outputFile, fourcc, fps, (width, height))
+    fourcc = cv2.VideoWriter_fourcc(*'VP90')
+    out = cv2.VideoWriter(outputFile + ".webm", fourcc, fps, (width, height))
     counter =1
     for slide in slideshow["slides"]:
         slidePath = """./slides/slide{counter}.png""".format(counter=counter)

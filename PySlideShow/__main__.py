@@ -11,6 +11,7 @@ def main():
                 description='Python tool capable of creating a slideshow based on .pss file')
 
     parser.add_argument("filename",help="Name .pss file, that describes the slideshow to be created")    # positional argument
+    parser.add_argument("-o","--outputFile",help="Name of the output file, without extension",default="output")
     args = parser.parse_args()
 
     # Read input file
@@ -28,7 +29,7 @@ def main():
     generateSlides(parsedData)
 
     # compose video
-    videoMaker(parsedData,"output.avi")
+    videoMaker(parsedData,args.outputFile)
 
 
     

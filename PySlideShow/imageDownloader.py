@@ -2,6 +2,8 @@ from bing_image_downloader import downloader
 import cv2
 import os
 import imutils
+from datetime import datetime
+
 
 def treatImgQueries(slideshow):
     for slide in slideshow["slides"]:
@@ -15,13 +17,11 @@ def treatImgQueries(slideshow):
 def downloadImg(query,presentChoice=True):
     flag = True
     while (flag):
-        downloader.download(query, limit=10,  output_dir='tempDS', adult_filter_off=False, force_replace=False, timeout=60, verbose=False)
+        downloader.download(query, limit=20,  output_dir='tempDS', adult_filter_off=False, force_replace=False, timeout=60, verbose=False)
         images = []
         for f in os.listdir("./tempDS/"+query):
-            if f.endswith("jpg"):
-                images.append(f)
-            else:
-                os.remove(os.path.join("./tempDS/"+query, f))
+            images.append(f)
+           
         chosen=""
         for image in images:
             image_path = os.path.join("./tempDS/"+query, image)
@@ -31,15 +31,24 @@ def downloadImg(query,presentChoice=True):
                 frame = imutils.resize(frame,width=min(1280,width),height=min(720,height))
                 cv2.imshow('Is this what you were looking for? [Y/n]',frame)
                 print("Is this what you were looking for? [Y/n]")
-                key = (cv2.waitKey() & 0xFF)
-                if key == ord('y'): # Hit `q` to exit
-                    flag=False
-                    chosen= os.path.join("./dataset/" + str(hash(query+image))+".jpg")
-                    cv2.imwrite(chosen,frame)
-                    cv2.destroyAllWindows()
-                    break
-                else:
-                    cv2.destroyAllWindows()
+               
+                flagX = True
+                flagY = False
+                while (flagX):
+                    key = (cv2.waitKey() & 0xFF)
+                    if key == ord('y'): # Hit `q` to exit
+                        flag=False
+                        now = datetime.now()
+                        chosen= "./dataset/" + query + str(hash(now)) + ".jpg"
+                        cv2.imwrite(chosen,frame)
+                        cv2.destroyAllWindows()
+                        flagX=False
+                        flagY = True
+                    elif key== ord("n"):
+                        cv2.destroyAllWindows()
+                        flagX=False
+                if flagY : break
+                
             else:
                 chosen=image
                 flag=False
