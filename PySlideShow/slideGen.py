@@ -3,6 +3,9 @@ import re
 import os
 import matplotlib.font_manager as fontM
 
+import textwrap
+
+
 def translateCont(Cont, mWidth,mHeight):
     ContL = re.findall("([tmb][lcr])",Cont)
     base = (mWidth,mHeight,0,0)
@@ -119,14 +122,15 @@ def generateSlides(slideshow):
             match type:
                 case "text":
                     draw = ImageDraw.Draw(new_slide)
-                    font = findFont(elemConf["font"],elemConf["size"])
-                    left, top, right, bottom = font.getbbox(elemConf["text"])
                     container = translateCont(elemConf["cont"],window_width,window_height)
+                    font = findFont(elemConf["font"],elemConf["size"])
+                    elemConf["text"]=textwrap.fill(elemConf["text"],int(((container[2]-container[0]) * 2) /elemConf["size"]))
+                    left, top, right, bottom = font.getbbox(elemConf["text"])
                     tWidth = right-left
-                    tHeight = bottom-top
+                    tHeight = bottom-top            
 
                     if elemConf["center"]:
-                        posx,posy=centerELEM(container,tWidth,tHeight)
+                        posx,posy=centerELEM(container,int(((container[2]-container[0]) * 2) /elemConf["size"]),tHeight)
                     else:
                         posx=container[0]
                         posy=container[1]

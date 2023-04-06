@@ -20,7 +20,8 @@ def downloadImg(query,presentChoice=True):
         downloader.download(query, limit=20,  output_dir='tempDS', adult_filter_off=False, force_replace=False, timeout=60, verbose=False)
         images = []
         for f in os.listdir("./tempDS/"+query):
-            images.append(f)
+            if f.endswith("jpg") or f.endswith("png"):
+                images.append(f)
            
         chosen=""
         for image in images:
