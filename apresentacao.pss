@@ -8,7 +8,7 @@ start
     text (text = "PySlideShow", font = "oi", size= 200, cont = "mrml", color = "Black",center=TRUE )
     text (text = "Realizado por: Gonçalo Ferreira & Rui Braga", font = "oi", size= 30, cont = "brbl", color = "grey",center=TRUE )
     duration (time = 10)
-        slide ....
+    slide ....
 
     text (text = "Módulos Utilizados", font = "oi" , size= 100, cont = "tltc", color = "black" )
     img (query= "flit python module logo", cont = "ml", center= TRUE)
@@ -20,27 +20,41 @@ start
     duration (time = 30)
     slide ........
 
-    text (text = "Ferramenta criada", font = "oi" , size= 100, cont = "tltc", color = "black" )
+    text (text = "Mais alguns módulos", font = "oi" , size= 100, cont = "tltc", color = "black" )
+    img (query= "ArgParser module logo", cont = "mlmc", center= TRUE)
+    img (query= "OpenCV logo", cont = "mcmr",center= TRUE)
+  
+    text (text = "ArgParser", font = "oi" , size= 30, cont = "blbc", color = "black",center = TRUE )
+    text (text = "CV2", font = "oi", size= 30, cont = "bcbr", color = "Black", center=TRUE )
+  
     duration (time = 30)
-    slide ..
+    slide ......
+
+
+    text (text = "Ferramenta criada", font = "oi" , size= 100, cont = "tltc", color = "black" )
+    text (text = "", font = "oi" , size= 30, cont = "mrbl", color = "black")
+    duration (time = 30)
+    slide ...
 
     text (text = "Ficheiro de Input", font = "oi" , size= 100, cont = "tltc", color = "black" )
     img (src= "./dataset/inputFile.png", cont = "mlbr",center= TRUE)
     duration (time = 30)
     slide ...
 
+    img (src="./dataset/background.png", cont = "tlbr",center= TRUE)
     text (text = "Download de Imagens", font = "oi" , size= 100, cont = "tltc", color = "black" )
-
     duration (time = 30)
-    slide ..
+    slide ...
 
     text (text = "Composição de Slides", font = "oi" , size= 100, cont = "tltc", color = "black" )
+    text (text = "A composição dos slides é feita com recurso ao módulo PIL, que através dos métodos Image.Draw.text() e Image.paste(), nos permite colocar texto e imagens na posição pretendida. Cada slide foi dividido em 9 containers que definem as fronteiras de cada elemento. As imagens são encolhidas até respeitarem estas fronteiras, e o texto é dividido em linhas para acomodar as fronteiras de largura.", font = "oi" , size= 30, cont = "mlmc", color = "black" )
     duration (time = 30)
-    slide ..
+    slide ...
 
     text (text = "Criação do Vídeo", font = "oi" , size= 100, cont = "tltc", color = "black" )
+    text (text = "Para a geração do vídeo é utilizado o módulo CV2, com recurso a classe VideoWriter, que permite a agregação dos slides, no slideshow final.", font = "oi" , size= 50, cont = "blbr", color = "red" )
     duration (time = 30)
-    slide ..
+    slide ...
     
     
     

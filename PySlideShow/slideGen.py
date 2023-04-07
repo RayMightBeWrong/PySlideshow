@@ -130,7 +130,7 @@ def generateSlides(slideshow):
                     tHeight = bottom-top            
 
                     if elemConf["center"]:
-                        posx,posy=centerELEM(container,int(((container[2]-container[0]) * 2) /elemConf["size"]),tHeight)
+                        posx,posy=centerELEM(container,tWidth,tHeight)
                     else:
                         posx=container[0]
                         posy=container[1]
@@ -139,7 +139,10 @@ def generateSlides(slideshow):
 
                 case "img":
                     img = Image.open(elemConf["src"])
+                    
                     container = translateCont(elemConf["cont"],window_width,window_height)
+                    if container == (window_width/20,window_height/20,19*window_width/20,19*window_height/20):
+                        container=(0,0,window_width,window_height)
                     img = resizeIMG(container,img)
                     if elemConf["center"]:
                         iwidth, iheight = img.size
