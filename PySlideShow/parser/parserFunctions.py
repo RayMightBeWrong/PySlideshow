@@ -11,29 +11,29 @@ def validate_config(attrs):
     if len(attrs) == 2:
         if ('height' in keys) and ('width' in keys):
             if get_attr_value(attrs, 'width') > 0 and get_attr_value(attrs, 'height') > 0:
-                res = {'width': get_attr_value(attrs, 'width'), 'heigth': get_attr_value(attrs, 'height')}
+                res = {'width': get_attr_value(attrs, 'width'), 'height': get_attr_value(attrs, 'height')}
                 return (True, res)
     elif len(attrs) == 1:
         if 'height' in keys:
             if get_attr_value(attrs, 'height') > 0:
                 height = get_attr_value(attrs, 'height')
                 width = height 
-                res = {'heigth': height, 'width': width}
+                res = {'height': height, 'width': width}
                 return (True, res)
         elif 'width' in keys:
             if get_attr_value(attrs, 'width') > 0:
                 width = get_attr_value(attrs, 'width') 
                 height = width 
-                res = {'heigth': height, 'width': width}
+                res = {'height': height, 'width': width}
                 return (True, res)
     elif len(attrs) == 0:
-        res = {'width': 500, 'heigth': 500}
+        res = {'width': 500, 'height': 500}
         return (True, res)
     return (False, [])
 
 def validate_durationtag(attrs):
     if len(attrs) == 1:
-        if attrs[0][0] == 'time' and (isinstance(attrs[0][1], float) and attrs[0][1] > 0):
+        if attrs[0][0] == 'time' and (isinstance(attrs[0][1], int) and attrs[0][1] > 0):
             return (True, attrs)
 
     return (False, [])
@@ -83,7 +83,7 @@ def validate_texttag_attrs(keys, attrs):
     else:
         return False
 
-    if isinstance(get_attr_value(attrs, 'size'), float):
+    if isinstance(get_attr_value(attrs, 'size'), int):
         if get_attr_value(attrs, 'size') < 0:
             return False
 

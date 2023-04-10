@@ -1,14 +1,19 @@
-#black = (0,0,0)
-#white = (255,255,255)
+config = {
+    width: 1920,
+    height: 1080
+}
 
-start
-	bground ()
-		text (c='something something something...')
-			slide
-		text (c='something something something...')
-		image ()
-			slide
-	bground
-	text
-		slide
-end
+#black = (10,30,40)
+#white = 0xFFFFF1
+
+start 
+    
+    img (query = "Coisas lindas", cont = "bl" )
+	text (text = "Coisas Lindas", font = "asdsad", size = 120, cont = "rl", color = #white)
+	img (query = "flores", cont = "trmc" )
+	duration (time = 10)
+		slide....
+    img (query = "rui", cont = "bltr", center = TRUE)
+
+        slide.
+end 
