@@ -1,6 +1,5 @@
 from PIL import Image,ImageDraw,ImageFont
 import re
-import os
 import matplotlib.font_manager as fontM
 
 import textwrap
@@ -15,62 +14,62 @@ def translateCont(Cont, mWidth,mHeight):
                     base=(
                         min(mWidth/20,base[0]),
                         min(mHeight/20,base[1]),
-                        max(mWidth/3,base[2]),
-                        max(mHeight/3,base[3])
+                        max(7*mWidth/20,base[2]),
+                        max(7*mHeight/20,base[3])
                         )
                 case "tc":
                     base=(
-                        min(mWidth/3,base[0]),
+                        min(7*mWidth/20,base[0]),
                         min(mHeight/20,base[1]),
-                        max(2*mWidth/3,base[2]),
-                        max(mHeight/3,base[3])
+                        max(13*mWidth/20,base[2]),
+                        max(7*mHeight/20,base[3])
                     )
                 case "tr":
                     base=(
-                        min(2*mWidth/3,base[0]),
+                        min(13*mWidth/20,base[0]),
                         min(mHeight/20,base[1]),
                         max(19*mWidth/20,base[2]),
-                        max(mHeight/3,base[3]))
+                        max(7*mHeight/20,base[3]))
                 
                 case "ml":
                     base=(
                         min(mWidth/20,base[0]),
-                        min(mHeight/3,base[1]),
-                        max(mWidth/3,base[2]),
-                        max(2*mHeight/3,base[3]))
+                        min(7*mHeight/20,base[1]),
+                        max(7*mWidth/20,base[2]),
+                        max(13*mHeight/20,base[3]))
 
                 case "mc":
                     base=(
-                        min(mWidth/3,base[0]),
-                        min(mHeight/3,base[1]),
-                        max(2*mWidth/3,base[2]),
-                        max(2*mHeight/3,base[3]))
+                        min(7*mWidth/20,base[0]),
+                        min(7*mHeight/20,base[1]),
+                        max(13*mWidth/20,base[2]),
+                        max(13*mHeight/20,base[3]))
                 
                 case "mr":
                     base=(
-                        min(2*mWidth/3,base[0]),
-                        min(mHeight/3,base[1]),
+                        min(13*mWidth/20,base[0]),
+                        min(7*mHeight/20,base[1]),
                         max(19*mWidth/20,base[2]),
-                        max(2*mHeight/3,base[3]))
+                        max(13*mHeight/20,base[3]))
                     
                 case "bl":
                     base=(
-                        min(mHeight/20,base[0]),
-                        min(2*mHeight/3,base[1]),
-                        max(mWidth/3,base[2]),
+                        min(mWidth/20,base[0]),
+                        min(13*mHeight/20,base[1]),
+                        max(7*mWidth/20,base[2]),
                         max(19*mHeight/20,base[3]))
                     
                 case "bc":
                     base=(
-                        min(mWidth/3,base[0]),
-                        min(2*mHeight/3,base[1]),
-                        max(2*mWidth/3,base[2]),
+                        min(7*mWidth/20,base[0]),
+                        min(13*mHeight/20,base[1]),
+                        max(13*mWidth/20,base[2]),
                         max(19*mHeight/20,base[3]))
                 
                 case "br":
                     base=(
-                        min(2*mWidth/3,base[0]),
-                        min(2*mHeight/3,base[1]),
+                        min(13*mWidth/20,base[0]),
+                        min(13*mHeight/20,base[1]),
                         max(19*mWidth/20,base[2]),
                         max(19*mHeight/20,base[3]))
 
@@ -87,14 +86,14 @@ def resizeIMG(container,img):
 
     while(flag1 or flag2):
         if min(container[2] - container[0],iwidth) != iwidth:
-            iwidth= iwidth*0.99
-            iheight= iheight*0.99
+            iwidth= iwidth*0.98
+            iheight= iheight*0.98
         else:
             flag1=False
                     
         if min(container[3] - container[1],iheight) != iheight:
-            iwidth= iwidth*0.99
-            iheight= iheight*0.99
+            iwidth= iwidth*0.98
+            iheight= iheight*0.98
         else:
             flag2=False
 

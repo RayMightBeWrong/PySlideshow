@@ -24,7 +24,6 @@ def main():
     # download images needed
     treatImgQueries(parsedData)
     
-    print(parsedData)
     # create slides
     generateSlides(parsedData)
 

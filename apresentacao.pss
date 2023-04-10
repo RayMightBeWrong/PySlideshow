@@ -11,50 +11,74 @@ start
     slide ....
 
     text (text = "Módulos Utilizados", font = "oi" , size= 100, cont = "tltc", color = "black" )
-    img (query= "flit python module logo", cont = "ml", center= TRUE)
+    img (src= "./dataset/basic/flit python module logo8153995660613873133.jpg", cont = "ml", center= TRUE)
     img (query= "PIL  PILLOW python module logo", cont = "mc",center= TRUE)
     img (query= "Lark Parser python module logo", cont = "mr",center= TRUE)
     text (text = "FLIT", font = "oi" , size= 30, cont = "bl", color = "black",center = TRUE )
     text (text = "PIL", font = "oi", size= 30, cont = "bc", color = "Black",center=TRUE )
     text (text = "LARK", font = "oi", size= 30, cont = "br", color = "grey",center=TRUE )
-    duration (time = 30)
+    duration (time = 20)
     slide ........
 
     text (text = "Mais alguns módulos", font = "oi" , size= 100, cont = "tltc", color = "black" )
-    img (query= "ArgParser module logo", cont = "mlmc", center= TRUE)
+    img (src= "./dataset/basic/ArgParser module logo4240553495128065869.jpg", cont = "mlmc", center= TRUE)
     img (query= "OpenCV logo", cont = "mcmr",center= TRUE)
   
     text (text = "ArgParser", font = "oi" , size= 30, cont = "blbc", color = "black",center = TRUE )
     text (text = "CV2", font = "oi", size= 30, cont = "bcbr", color = "Black", center=TRUE )
-  
-    duration (time = 30)
+    duration (time = 10)
     slide ......
 
 
     text (text = "Ferramenta criada", font = "oi" , size= 100, cont = "tltc", color = "black" )
-    text (text = "", font = "oi" , size= 30, cont = "mrbl", color = "black")
-    duration (time = 30)
+    img (src= "./dataset/basic/main.png", cont = "mlbr",center= TRUE)
+    duration (time = 20)
     slide ...
 
     text (text = "Ficheiro de Input", font = "oi" , size= 100, cont = "tltc", color = "black" )
-    img (src= "./dataset/inputFile.png", cont = "mlbr",center= TRUE)
+    img (src= "./dataset/basic/inputFile.png", cont = "mlbr",center= TRUE)
     duration (time = 30)
     slide ...
 
-    img (src="./dataset/background.png", cont = "tlbr",center= TRUE)
+    img (src="./dataset/basic/background.png", cont = "tlbr",center= TRUE)
     text (text = "Download de Imagens", font = "oi" , size= 100, cont = "tltc", color = "black" )
-    duration (time = 30)
-    slide ...
+    img (src="./dataset/basic/bing-image-downloader.png", cont = "mlmr",center= TRUE)
+    duration (time = 20)
+    slide ....
 
     text (text = "Composição de Slides", font = "oi" , size= 100, cont = "tltc", color = "black" )
     text (text = "A composição dos slides é feita com recurso ao módulo PIL, que através dos métodos Image.Draw.text() e Image.paste(), nos permite colocar texto e imagens na posição pretendida. Cada slide foi dividido em 9 containers que definem as fronteiras de cada elemento. As imagens são encolhidas até respeitarem estas fronteiras, e o texto é dividido em linhas para acomodar as fronteiras de largura.", font = "oi" , size= 30, cont = "mlmc", color = "black" )
     duration (time = 30)
     slide ...
 
+    img (src= "./dataset/basic/red.png", cont="tl",center=TRUE)
+    img (src= "./dataset/basic/blue.png", cont="tc",center=TRUE)
+    img (src= "./dataset/basic/green.png", cont="tr",center=TRUE)
+    img (src= "./dataset/basic/black.png", cont="ml",center=TRUE)
+    img (src= "./dataset/basic/purple.png", cont="mc",center=TRUE)
+    img (src= "./dataset/basic/orange.png", cont="mr",center=TRUE)
+    img (src= "./dataset/basic/yellow.png", cont="bl",center=TRUE)
+    img (src= "./dataset/basic/pink.png", cont="bc",center=TRUE)
+    img (src= "./dataset/basic/grey.png", cont="br",center=TRUE)
+    text (text = "tl", font = "oi" , size= 100, cont = "tl", color = "white" )
+    text (text = "tc", font = "oi" , size= 100, cont = "tc", color = "white" )
+    text (text = "tr", font = "oi" , size= 100, cont = "tr", color = "white" )
+    text (text = "ml", font = "oi" , size= 100, cont = "ml", color = "white" )
+    text (text = "mc", font = "oi" , size= 100, cont = "mc", color = "white" )
+    text (text = "mr", font = "oi" , size= 100, cont = "mr", color = "white" )
+    text (text = "bl", font = "oi" , size= 100, cont = "bl", color = "white" )
+    text (text = "bc", font = "oi" , size= 100, cont = "bc", color = "white" )
+    text (text = "br", font = "oi" , size= 100, cont = "br", color = "white" )
+    duration (time = 20)
+    slide ...................
+
+
+
     text (text = "Criação do Vídeo", font = "oi" , size= 100, cont = "tltc", color = "black" )
-    text (text = "Para a geração do vídeo é utilizado o módulo CV2, com recurso a classe VideoWriter, que permite a agregação dos slides, no slideshow final.", font = "oi" , size= 50, cont = "blbr", color = "red" )
-    duration (time = 30)
-    slide ...
+    text (text = "Para a geração do vídeo é utilizado o módulo CV2, com recurso a classe VideoWriter, que permite a agregação dos slides, no slideshow final.", font = "oi" , size= 40, cont = "mrbr", color = "red" )
+    img (src="./dataset/basic/videoMaker.png", cont = "mlbc",center= TRUE)
+    duration (time = 20)
+    slide ....
     
     
     
