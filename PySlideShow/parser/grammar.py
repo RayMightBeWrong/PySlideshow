@@ -9,7 +9,6 @@ config_attr: WORD ":" NR
 
 varcall: "#" WORD
 var: varcall "=" attr_content
-    | "var até agora só contempla cores"
 rgb: "(" NR "," NR "," NR ")"
     | "0" "x" HEXWORD 
 
