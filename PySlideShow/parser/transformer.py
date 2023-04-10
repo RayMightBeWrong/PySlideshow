@@ -23,6 +23,13 @@ class Transformer(Transformer):
         self.configuration = []
 
     def start(self, items):
+        for slide in slides:
+            print('SLIDE: ')
+            for e in slide:
+                print(e)
+            print()
+        print()
+
         if self.valid:
             if self.configuration == []:
                 self.configuration = {'width': 500, 'heigth': 500}

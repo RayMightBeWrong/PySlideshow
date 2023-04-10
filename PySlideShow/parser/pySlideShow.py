@@ -6,7 +6,9 @@ from grammar import grammar
 import transformer
 
 
-frase = sys.stdin.read()
+f = open('test', 'r')
+frase = f.read()
+#frase = sys.stdin.read()
 p = Lark(grammar)
 
 parse_tree = p.parse(frase)
