@@ -46,6 +46,7 @@ Usando # é possível definir variáveis que depois são chamados, novamente, us
 Existem 4 tipos de tags:
 1. text
 2. img
-3. duration
-4. slide
+3. duration - tem apenas um atributo, "time", que define a duração de um slide no vídeo
+4. slide - assinala que se deve produzir um slide com as tags que estão abertas
 
+Cada tag (exceto o slide) é "fechada" usando um ".".
