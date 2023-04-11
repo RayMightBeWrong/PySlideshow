@@ -1,14 +1,14 @@
 # PySlideshow
 
-Esta ferramenta é um gerador de slides que, permite ao utilizador, criar slideshows através de um ficheiro texto.
+Esta ferramenta é um gerador de slides capaz de criar slideshows através de um ficheiro texto.
 
 ### MÓDULOS UTILIZADOS:
 
-1. Lark - módulo que permite fazer o parsing do ficheiro texto escolhido pelo utilizador
-2. Pillow PIL - módulo
-3. Flit - módulo
-4. Argparse - módulo
-5. CV2 - módulo que transforma os slides produzidos em vídeo
+1. Lark - módulo usado para fazer o parsing do ficheiro texto escolhido pelo utilizador
+2. Pillow PIL - módulo usado para criar slides (imagens) através da informação recolhida
+3. Flit - módulo que permite empacotar um projeto Python
+4. Argparse - módulo que permite fazer o parsing de argumentos e opções no terminal
+5. CV2 - módulo usado transforma os slides produzidos em vídeo
 
 ### FORMATO DA LINGUAGEM:
 
