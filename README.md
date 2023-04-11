@@ -46,12 +46,12 @@ Usando # é possível definir variáveis que depois são chamados, novamente, us
 Existem 4 tipos de tags:
 
 ###### text
-a. text
-b. font
-c. size
-d. cont
-e. color
-f. center
+1. text
+2. font
+3. size
+4. cont
+5. color
+6. center
 
 ###### img
 2. img
