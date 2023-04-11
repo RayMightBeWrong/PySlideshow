@@ -4,11 +4,11 @@ Esta ferramenta é um gerador de slides que, permite ao utilizador, criar slides
 
 ### MÓDULOS UTILIZADOS:
 
-1. Lark -
-2. Pillow PIL -
-3. Flit -
-4. Argparse -
-5. CV2 -
+1. Lark - módulo que permite fazer o parsing do ficheiro texto escolhido pelo utilizador
+2. Pillow PIL - módulo
+3. Flit - módulo
+4. Argparse - módulo
+5. CV2 - módulo que transforma os slides produzidos em vídeo
 
 ### FORMATO DA LINGUAGEM:
 
