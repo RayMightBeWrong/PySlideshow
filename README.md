@@ -4,6 +4,12 @@ Esta ferramenta é um gerador de slides que, permite ao utilizador, criar slides
 
 ### MÓDULOS UTILIZADOS:
 
+1. Lark -
+2. Pillow PIL -
+3. Flit -
+4. Argparse -
+5. CV2 -
+
 ### FORMATO DA LINGUAGEM:
 
 ##### Exemplo:
