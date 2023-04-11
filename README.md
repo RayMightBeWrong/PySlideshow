@@ -12,7 +12,7 @@ Esta ferramenta é um gerador de slides capaz de criar slideshows através de um
 
 ### FORMATO DA LINGUAGEM:
 
-##### Exemplo:
+#### Exemplo:
 
 ```
 config = {
