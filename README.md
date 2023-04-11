@@ -33,15 +33,15 @@ start
 end
 ```
 
-##### Config (opcional)
+#### Config (opcional)
 
 Na configuração é escolhido a resolução dos slides
 
-##### Variáveis (opcional)
+#### Variáveis (opcional)
 
 Usando # é possível definir variáveis que depois são chamados, novamente, usando #
 
-##### Tags e slides
+#### Tags e slides
 
 Existem 3 tipos de tags:
 
