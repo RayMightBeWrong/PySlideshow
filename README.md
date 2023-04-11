@@ -4,6 +4,9 @@ Esta ferramenta é um gerador de slides que, permite ao utilizador, criar slides
 
 ### Formato da Linguagem
 
+
+##### Exemplo:
+
 ```
 config = {
     width: 1920,
