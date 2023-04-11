@@ -76,8 +76,8 @@ def translateCont(Cont, mWidth,mHeight):
     return base
 
 def findFont(font,size):
-
-    return ImageFont.truetype(fontM.findfont(font), size)
+    fonts = fontM.FontProperties(family=font)
+    return ImageFont.truetype(fontM.findfont(fonts), size)
 
 def resizeIMG(container,img):
     iwidth, iheight = img.size
