@@ -18,14 +18,17 @@ config = {
 
 start 
     text (text = "../atuamae/", font = "asdsad", size = 12, cont = "rl", color = #white)
+        img (query = "boneco de peluche", cont = "bl" )
+            duration (time = 3)
+                slide
+            .
+        .
+    .
     img (query = "boneco de peluche", cont = "bl" )
-    duration (time = 3)
-
-        slide...
-    img (query = "boneco de peluche", cont = "bl" )
-     duration (time = 3)
-
-        slide..
+        duration (time = 3)
+            slide
+        .
+    .
 end
 ```
 
