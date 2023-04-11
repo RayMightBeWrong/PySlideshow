@@ -43,6 +43,9 @@ Usando # é possível definir variáveis que depois são chamados, novamente, us
 
 #### Tags e slides
 
-Existem 3 tipos de tags:
-
+Existem 4 tipos de tags:
+1. text
+2. img
+3. duration
+4. slide
 
