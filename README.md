@@ -54,16 +54,15 @@ Existem 4 tipos de tags:
 6. center
 
 ###### img
-2. img
-    a. query
-    b. src
-    c. cont
-    d. center
+1. query
+2. src
+3. cont
+4. center
     
 ###### duration
-3. duration - tem apenas um atributo, "time", que define a duração de um slide no vídeo
+Tem apenas um atributo, "time", que define a duração de um slide no vídeo
 
 ###### slide
-5. slide - assinala que se deve produzir um slide com as tags que estão abertas
+Assinala que se deve produzir um slide com as tags que estão abertas
 
 Cada tag (exceto o slide) é "fechada" usando um ".".
