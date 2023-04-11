@@ -20,23 +20,29 @@ config = {
     height: 1080
 }
 
-#black = (10,30,40)
-#white = 0xFFFFF1
+#text1 = "Hello World!"
 
 start 
-    text (text = "../atuamae/", font = "asdsad", size = 12, cont = "rl", color = #white)
-        img (query = "boneco de peluche", cont = "bl" )
+    text (text = #text1, font = "Times New Roman", size = 12, cont = "rl", color = "white")
+        img (query = "planet earth", cont = "bl" )
             duration (time = 3)
                 slide
             .
         .
     .
-    img (query = "boneco de peluche", cont = "bl" )
-        duration (time = 3)
-            slide
-        .
-    .
 end
 ```
+
+##### Config (opcional)
+
+Na configuração é escolhido a resolução dos slides
+
+##### Variáveis (opcional)
+
+Usando # é possível definir variáveis que depois são chamados, novamente, usando #
+
+##### Tags e slides
+
+Existem 3 tipos de tags:
 
 
