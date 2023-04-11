@@ -63,6 +63,6 @@ Existem 4 tipos de tags:
 Tem apenas um atributo, "time", que define a duração de um slide no vídeo
 
 ###### slide
-Assinala que se deve produzir um slide com as tags que estão abertas
+Assinala que se deve produzir um slide com as tags que estão "abertas"
 
 Cada tag (exceto o slide) é "fechada" usando um ".".
