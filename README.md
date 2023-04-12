@@ -39,7 +39,7 @@ Na configuração é escolhido a resolução dos slides
 
 #### Variáveis (opcional)
 
-Usando # é possível definir variáveis que depois são chamados, novamente, usando #
+Usando # é possível definir variáveis que depois são chamadas, novamente, usando #
 
 #### Tags e slides
 
