@@ -46,18 +46,18 @@ Usando # é possível definir variáveis que depois são chamados, novamente, us
 Existem 4 tipos de tags:
 
 ###### text
-1. text
-2. font
-3. size
-4. cont
-5. color
-6. center
+1. text - define o conteúdo
+2. font - define a font do texto
+3. size - define o tamanho do texto
+4. cont - define o container em que se coloca o texto
+5. color - define a cor do texto
+6. center - opcional, pode ser TRUE ou FALSE (por defeito) e decide se o texto deve ser centrado
 
 ###### img
-1. query
-2. src
-3. cont
-4. center
+1. query - indica que pesquisa é que deve ser feito para obter a imagem
+2. src - indica aonde está imagem, caso seja uma imagem que exista localmente
+3. cont - define o container em que se coloca a imagem
+4. center - opcional, pode ser TRUE ou FALSE (por defeito) e decide se a imagem deve ser centrada
     
 ###### duration
 Tem apenas um atributo, "time", que define a duração de um slide no vídeo
@@ -66,3 +66,5 @@ Tem apenas um atributo, "time", que define a duração de um slide no vídeo
 Assinala que se deve produzir um slide com as tags que estão "abertas"
 
 Cada tag (exceto o slide) é "fechada" usando um ".".
+
+
